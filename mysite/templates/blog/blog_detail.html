@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title%}详情页{% endblock%}
+{%block content%}
+<div>
+    <h1 class="header">{{articles.title}}</h1>
+
+    <div>
+
+    <div class="blog_list">
+         <p style="text-align: center;">{{publish}}</p>
+    <p style="text-indent: 2em;">{{articles.body}}</p>
+    </div>
+    <div class="propaganda">
+        <h2>广告</h2>
+        <p>跟老齐学：www.itdiffer.com</p>
+        <img width="200px" src="../../cats.jpg">
+    </div>
+</div>
+{%endblock%}
