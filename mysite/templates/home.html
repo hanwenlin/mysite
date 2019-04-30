@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<div class="text-center">
+    <h1>WELCOME YOU</h1>
+    <h3>life is short.you need happy.</h3>
+    <h2>Then you can do everything you want to do and eat every food you like.</h2>
+    {% load staticfiles %}
+    <img src="{% static 'images/book.jpg'%}">
+</div>
+{% endblock%}

@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blog',
     'account',
+    'article',
 ]
 
 MIDDLEWARE = [
@@ -66,6 +67,9 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
+            'libraries': {
+                'article_tags': 'article.templatetags.article_tags',
+            }
         },
     },
 ]
@@ -127,4 +131,21 @@ STATICFILES_DIRS =[
     os.path.join(BASE_DIR,'static'),
 ]
 
-LOGIN_REDIRECT_URL = '/blog/'
+LOGIN_REDIRECT_URL = '/home/'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.163.com'
+EMAIL_HOST_USER ='15171346470@163.com'
+EMAIL_HOST_PASSWORD ='920618hwl.'
+EMAIL_PORT = 833
+EMAIL_USE_TLS =  True
+# EMAIL_USE_SSL = True
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
+# from django.core.mail import send_mail
+# send_mail('LEARN DJANGO','There is a very good lesson of django in','15171346470@163.com',['1353516732@qq.com'],fail_silently=False)
+
+
+REDIS_HOST = 'localhost'
+REDIS_PORT = 6379
+REDIS_DB = 0
